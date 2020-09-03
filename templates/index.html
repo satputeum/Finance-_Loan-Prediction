@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+
+    <div style="color:black">
+	<div style ="background-color:rgb(255, 99, 71)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Loan Predictive Analysis</h1>
+           <input type="loan_amnt" name="loan_amnt" placeholder="Loan Ammount"required="required">
+		   <p> </p><br><input type="term" name="term" placeholder="Term"required="required">
+           <p> </p><br><input type="int_rate" name="int_rate" placeholder="Interest rate"required="required">
+		   <p> </p><br><input type="emp_length" name="emp_length" placeholder="emp_length"required="required">
+		   <p> </p><br><input type="annual_inc" name="annual_inc" placeholder="annual_inc"required="required">
+		   <p> Purpose </p><select type="purpose" name="purpose" required="required">
+									 <option value="">car </option>
+									 <option value="">credit_card </option>
+									 <option value="">debt_consolidation </option>
+									 <option value="">educational </option>
+									 <option value="">home_improvement </option>
+									 <option value="">house </option>
+									 <option value="">medical </option>
+									 <option value="">moving </option>
+									 <option value="">major_purchase </option>
+									 <option value="">other </option>
+									 <option value="">medical </option>
+									 <option value="">renewable_energy </option>
+									 <option value="">vacation </option>
+									 <option value="">wedding </option>
+									 </select>
+		   <p> Addr_state </p><select type="addr_state" name="addr_state" placeholder="addr_state"required="required">
+								<option value=""> AK </option>
+								<option value="">AL </option>
+								<option value="">AZ </option>
+								<option value="">CA </option>
+								<option value="">CO </option>
+								<option value="">DC </option>
+								<option value="">CT</option>
+								<option value="">DE </option>
+								<option value="">MD</option>
+								<option value="">MA </option>
+								<option value="">KY </option>
+								<option value="">LA </option>
+								<option value="">KS </option>
+								<option value="">IN </option>
+								<option value="">IA </option>
+								<option value="">ID </option>
+								<option value="">IL </option>
+								<option value="">AK </option>
+								<option value="">GA </option>
+								<option value="">AK </option>
+								<option value="">FL </option>
+								</select>
+		  <p> </p><input type="dti" name="dti" placeholder="dti"required="required">
+		   <p> </p><input color="blue";type="verification_status" name="verification_status" id= "verification_status"placeholder="verification_status"required="required"/>
+		   <p> Home_ownership</p><select name="home_ownership" id="home_ownership required="required">
+                <option value="">NONE </option>
+				<option value="">Any</option>
+				<option value="">Other</option>
+				 <option value="">Rent</option>
+                <option value="">Own</option>
+                <option value="">MORTGAGE</option>
+                 </select>
+			<p> </p><br><input type="longest_credit_length" name="longest_credit_length" placeholder="longest_credit_length"required="required">
+			<p> </p><br><input type="total_acc" name="total_acc" placeholder="total_acc"required="required">
+            <p></p><br><input type="revol_util" name="revol_util" placeholder="revol_util"required="required">
+			<p></p><br><input type="delinq_2yrs" name="delinq_2yrs" placeholder="delinq_2yrs"required="required">
+               
+            
+            <br><br><button id="sub" type="submit "class="btn btn-primary">Predict</button>
+            <br>
+		</div>
+        </form>
+		  <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+    </div>
+
+
+
+
+<style>
+body {
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 100px;
+  
+  
+}
+#box {
+            border-radius: 100px;
+            border-color: 100px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 10%;
+            height: 500px;
+            right: 300%;
+            padding: 100px;
+            margin: 0px;
+            font-size: 12px;
+        }
+        
+</style>
+</body>
+
+</html>
